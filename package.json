@@ -1,0 +1,45 @@
+{
+  "name": "openai-stream-parser",
+  "version": "1.0.0",
+  "description": "Lightweight OpenAI streaming response parser for SSE events",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "openai",
+    "chatgpt",
+    "streaming",
+    "sse",
+    "parser",
+    "gpt-4",
+    "gpt-3",
+    "ai",
+    "llm"
+  ],
+  "author": "jy02140251",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jy02140251/openai-stream-parser"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  }
+}
